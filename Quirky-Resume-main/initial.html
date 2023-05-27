@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Quirky Resume</title>
+</head>
+
+<body>
+  <!-- here goes html code -->
+
+  <div class="container" id="cv-form">
+    
+    <h1 style="font-family:verdana" class="text-center my-4"><b>Top Resume</b></h1>
+    <p class="text-center my-4">𝒜𝓃 𝓊𝓃𝓅𝒶𝓇𝒶𝓁𝓁𝑒𝓁𝑒𝒹 𝑜𝓃𝓁𝒾𝓃𝑒 𝒸𝓋 𝑔𝑒𝓃𝑒𝓇𝒶𝓉𝑜𝓇</p>
+
+    <div class="row">
+      <div class="col-md-6">
+        <!-- first col -->
+        <h3>𝐏𝐞𝐫𝐬𝐨𝐧𝐚𝐥 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧</h3>
+
+        <div class="form-group">
+          <label for="nameField">Your Name</label>
+          <input type="text" id="nameField" placeholder="Enter Full Name Here" class="form-control" />
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="contactField">Your Contact Numbers</label>
+          <input type="text" id="contactField" placeholder="Enter Here" class="form-control" />
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="addressField">Your Address</label>
+          <textarea id="addressField" placeholder="Enter Here" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group mt-3">
+          <label for="">Select your Profile Picture</label>
+          <input  id="imgField" type="file" class="form-control" />  
+
+        </div>
+
+        <div class="form-group mt-2">
+          <label for="mailField">Your Mail ID</label>
+          <textarea id="mailField" placeholder="Enter Here" class="form-control" rows=""></textarea>
+        </div>
+
+        <p class="text-secondary mt-3">Important Links</p>
+
+        <div class="form-group mt-2">
+          <label for="fbField">Facebook</label>
+          <input type="text" id="fbField" placeholder="Enter Here" class="form-control" />
+        </div>
+        <div class="form-group mt-2">
+          <label for="linkedField">LinkedIn</label>
+          <input type="text" id="linkedField" placeholder="Enter Here" class="form-control" />
+        </div>
+        <div class="form-group mt-2">
+          <label for="gitField">GitHub</label>
+          <input type="text" id="gitField" placeholder="Enter Here" class="form-control" />
+        </div>
+      </div>
+      <div class="col-md-6">
+        <!-- second col -->
+        <h3>𝐏𝐫𝐨𝐟𝐞𝐬𝐬𝐢𝐨𝐧𝐚𝐥 𝐈𝐧𝐟𝐨𝐫𝐦𝐚𝐭𝐢𝐨𝐧</h3>
+
+        <div class="form-group mt-2">
+          <label for="">Profile Summary</label>
+          <textarea id="objectiveField" rows="4" placeholder="Enter here your objective."
+            class="form-control"></textarea>
+        </div>
+
+        <div class="form-group mt-2" id="we">
+          <label for="">Work Experience</label>
+          <textarea rows="3" placeholder="Enter here your Work Experience." class="form-control weField"
+          ></textarea>
+
+          <div class="container text-center mt-3" id="weAddButton">
+              <button onclick="addNewweField()" class="btn btn-primary btn-sm">Add</button>
+          </div>
+         
+        </div>
+
+        <div class="form-group mt-2" id="aq">
+          <label for="">Academic Qualifications</label>
+          <!--<textarea rows="3" placeholder="Add a new cell and enter your Educational Qualifications "
+            class="form-control aqfield"></textarea> -->
+            <textarea rows="3" placeholder="Enter here your Educational Qualifications." class="form-control aqField"
+          ></textarea>
+
+          <div class="container text-center mt-2" id="aqAddButton">
+            <button onclick="addNewaqField()" class="btn btn-primary btn-sm">
+              Add</button>
+          </div>
+
+        </div>
+
+        <div class="form-group mt-2" id="ks">
+          <label for="">Key Skills</label>
+         <!-- <textarea rows="3" placeholder="Add a new cell and enter your Professional Skills "
+            class="form-control ksfield"></textarea> -->
+            <textarea rows="3" placeholder="Enter here your Professional Skills." class="form-control ksField"
+          ></textarea>
+
+          <div class="container text-center mt-2" id="ksAddButton">
+            <button onclick="addNewksField()" class="btn btn-primary btn-sm">
+              Add</button>
+          </div>
+
+        </div>
+
+        <div class="form-group mt-2" id="lg">
+          <label for="">Languages</label>
+          <!-- <textarea rows="3" placeholder="Add a cell and enter the languages you can speak."
+            class="form-control lgfield"></textarea> -->
+            <textarea rows="3" placeholder="Enter here your Languages you Speak." class="form-control lgField"
+          ></textarea>
+
+          <div class="container text-center mt-2" id="lgAddButton">
+            <button onclick="addNewlgField()" class="btn btn-primary btn-sm">
+              Add</button>
+          </div>
+        </div>
+
+        <div class="form-group mt-2" id="sk">
+          <label for="">Soft Skills</label>
+          <!--<textarea rows="3" placeholder="Add a cell and enter your soft skills." class="form-control skfield"></textarea>-->
+          <textarea rows="3" placeholder="Enter here your Soft Skills." class="form-control skField"
+          ></textarea>
+
+          <div class="container text-center mt-2" id="skAddButton">
+            <button onclick="addNewskField()" class="btn btn-primary btn-sm">
+              Add</button>
+          </div>
+        </div>
+
+        <div class="form-group mt-2" id="ac">
+          <label for="">Accomplishments</label>
+         <!-- <textarea rows="3" placeholder="Add a cell and enter your significant Achievements."
+            class="form-control acfield"></textarea>-->
+            <textarea rows="3" placeholder="Enter here your Accomplishments." class="form-control acField"
+          ></textarea>
+
+          <div class="container text-center mt-2" id="acAddButton">
+            <button onclick="addNewacField()" class="btn btn-primary btn-sm">
+              Add</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container text-center mt-5">
+      <button onclick="generateCV()" class="btn btn-primary btn-lg">
+        Generate CV
+      </button>
+    </div>
+  </div>
+
+
+  <!-- cv template -->
+
+  <div class="container" id="cv-template">
+    <div class="row">
+      <div class="col-md-4 text-center py-5 background">
+        <!-- first col -->
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVenVtTOfnFD5EpA4XwnURrPJFgxhUlya_0g&usqp=CAU"
+          alt="" class="img-fluid myimg" 
+          id="imgTemplate"/>
+
+
+        <div class="container">
+          <p id="nameT">Anish Vikram Varma</p>
+          <p id="contactT">+91 6304868350,+91 9030762980</p>
+          <p id="addressT">Flat no 401, Aditya Gardens, INDIA</p>
+          <p id="mailT">anishvarmakdfi@gmail.com</p>
+
+          <hr />
+
+          <p>
+            <a id="fbT" href="#1">https://www.Facebook.com/anishvikramvarma</a>
+          </p>
+          <p>
+            <a id="linkedT" href="#1">https://www.LinkedIn.com/NAMBURI ANISH VIKRAM VARMA</a>
+          </p>
+          <p>
+            <a id="gitT" href="#1">https://www.GitHub.com/Anish1217</a>
+          </p>
+
+          <hr />
+        </div>
+      </div>
+      <div class="col-md-8 py-4">
+        <!-- second col -->
+        <h1 id="nameT2" class="text-center" style="font-weight:940">
+          Anish Vikram Varma
+        </h1>
+
+        <!-- Profile Summary card -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Profile Summary</h3>
+          </div>
+          <div class="card-body">
+            <p id="objectiveT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt voluptatum magni ipsa
+              aspernatur, assumenda praesentium temporibus quasi fugiat nisi natus dolore non ad a perferendis, nostrum
+              atque! Consequuntur sequi, nulla itaque laborum vel alias. Magni fugit exercitationem, vero cum
+              consequatur voluptates. Quia doloremque rerum expedita praesentium numquam ducimus vitae doloribus!</p>
+          </div>
+        </div>
+
+        <!-- work Experience -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Work Experience</h3>
+          </div>
+          <div class="card-body">
+            <ul id="weT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ipsam?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ipsam?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, ipsam?</li>
+            </ul>
+          </div>
+        </div>
+     
+
+        <!-- Academic Qualifications -->     
+  
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Academic Qualifications</h3>
+          </div>
+          <div class="card-body">
+            <ul id="aqT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Key Skills -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Key Skills</h3>
+          </div>
+          <div class="card-body">
+            <ul id="ksT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Languages -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Languages</h3>
+          </div>
+          <div class="card-body">
+            <ul id="lgT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Soft Skills</h3>
+          </div>
+          <div class="card-body">
+            <ul id="skT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Accomplishments -->
+
+        <div class="card mt-3">
+          <div class="card-header background">
+            <h3>Accomplishments</h3>
+          </div>
+          <div class="card-body">
+            <ul id="acT">
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+              <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo, corporis?</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="container mt-3 text-center">
+          <button onclick="printCV()" class="btn background">Print CV</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
